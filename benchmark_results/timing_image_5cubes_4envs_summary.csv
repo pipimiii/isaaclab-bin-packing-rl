@@ -1,0 +1,2 @@
+num_episodes_completed,num_envs,num_cubes,cube_size,obs_type,reward_type,mean_sim_steps,std_sim_steps,mean_sim_time_s,mean_wall_time_s,std_wall_time_s,mean_fps,std_fps,mean_real_time_factor,std_real_time_factor,mean_success_envs,mean_timeout_envs,mean_reward_sum,mean_drop_cycle_sim_steps,mean_drop_cycle_wall_time_s
+100,4,5,0.05,image,hybrid,261.73,18.506136819984878,4.362166666666666,3.8103824511077256,0.33098568670898737,68.93990606237242,5.03240510637328,1.1489984343728736,0.08387341843955466,4.0,0.0,13.572480087280274,52.346000000000004,0.7617605271432549
