@@ -1,0 +1,39 @@
+[WARN][AppLauncher]: There are no arguments attached to the ArgumentParser object. If you have your own arguments, please load your own arguments before calling the `AppLauncher.add_app_launcher_args` method. This allows the method to check the validity of the arguments and perform checks for argument names.
+[INFO][AppLauncher]: Loading experience file: /home/user_124/IsaacLab/source/apps/isaaclab.python.headless.kit
+[Warning] [omni.isaac.kit.simulation_app] Modules: ['omni.kit_app'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [omni.isaac.kit.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+Loading user config located at: '/home/user_124/anaconda3/envs/isaaclab/lib/python3.10/site-packages/omni/data/Kit/Isaac-Sim/4.2/user.config.json'
+[Info] [carb] Logging to file: /home/user_124/anaconda3/envs/isaaclab/lib/python3.10/site-packages/omni/logs/Kit/Isaac-Sim/4.2/kit_20260509_213137.log
+2026-05-09 18:31:37 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-05-09 18:31:37 [238ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.126.09    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090          | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2684      | eae02418.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 6.14.0-37-generic
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900K | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 64038 | Free Memory: 56936
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2026-05-09 18:31:40 [2,691ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[INFO] Scene loaded. Measuring bin bounding box...
+
+================================================================================
+[INFO] Prim path: /World/envs/env_0/small_KLT
+[INFO] World bbox min: (-0.19784278007224207, -0.29663467379672637, -0.14635991393052955)
+[INFO] World bbox max: (0.19784278007224207, 0.29663471344474596, 0.1463599278356551)
+[INFO] World bbox size (scaled): (0.39568556014448414, 0.5932693872414723, 0.29271984176618465)
+[INFO] Applied scale: (2.0, 2.0, 2.0)
+[INFO] Estimated original asset size: (0.19784278007224207, 0.29663469362073613, 0.14635992088309233)
+================================================================================
+
+[INFO]: Simulation is stopped. Shutting down the app.

@@ -1,0 +1,83 @@
+rm -f camera_output/*.png
+
+HEADLESS=1 ENABLE_CAMERAS=1 python -u mycodes/train.py \
+  --num_cubes 20 \
+  --cube_size 0.08 \
+  --num_envs 10 \
+  --max_episode_steps 4000 \
+  --settle_max_steps 240 \
+  --final_settle_max_steps 800 \
+  --drop_xy_half 0.12 \
+  --obs_type vector \
+  --reward_type hybrid \
+  --train_steps 1000 \
+  --rollout_steps 20 \
+  --ppo_epochs 4 \
+  --mini_batch_size 64 \
+  --learning_rate 3e-4 \
+  --log_dir training_logs \
+  --run_name ppo_20cubes_vector_hybrid \
+  --save_policy \
+  --policy_out training_logs/ppo_20cubes_vector_hybrid.pt \
+  --save_camera \
+  --camera_interval 400
+
+
+#bin setup
+x size ≈ 0.396 m
+y size ≈ 0.593 m
+z size ≈ 0.293 m
+cube edge length = 0.08 m
+
+#action space
+action = [a_x, a_y]
+drop_x = a_x × drop_xy_half
+drop_y = a_y × drop_xy_half
+2D continuous action, controls the next cube x-y dropping position
+
+#observation space
+vector
+image
+multimodal
+    #vector obs_type(used for ppo)
+        cube local positions
+        cube linear velocities
+        active cube mask
+        dropped cube mask
+        progress information
+        #tells the policy where the cubes are, how fast they are moving, which cubes are active, which cubes have already been dropped, and how far the episode has progressed.
+    #"inside the bin" def
+    |x_local| ≤ bin_half_x
+    |y_local| ≤ bin_half_y
+    bin_floor_z ≤ z_local ≤ bin_top_z
+    #stability def
+    speed ≤ stable_speed_thresh
+    stable_speed_thresh = 0.05 m/s
+    stable_steps = 15 consecutive physics steps, 15 × 0.01667 ≈ 0.25 s
+    #success condition:
+    A single cube succeeds if: inside bin + stable
+    An environment succeeds if: all active cubes are successful
+    #terminal condition:
+    An episode terminates when either: all active cubes are inside and stable
+    or: max_episode_steps is reached
+
+#reward_type
+--reward_type sparse
+        +1 for newly successful cubes
+        +completion bonus when all cubes are successful
+--reward_type dense
+        inside fraction reward
+        height penalty
+        center-distance penalty
+        xy-spread penalty
+        speed penalty
+--reward_type hybrid
+
+#train
+output logs:
+    policy loss
+    value loss
+    entropy
+    approximate KL
+    parameter delta
+    reward

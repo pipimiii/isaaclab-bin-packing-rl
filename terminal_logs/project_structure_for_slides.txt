@@ -1,0 +1,26 @@
+IsaacLab/
+  mycodes/
+    measure_small_klt.py
+    bin_packing_env.py
+    run_random_env.py
+    train.py
+    benchmark_timing.py
+    README.md
+
+  camera_output/
+    rl_step....png
+    rl_final_step....png
+
+  training_logs/
+    ppo_20cubes_vector_hybrid.csv
+    ppo_20cubes_vector_hybrid.pt
+
+  benchmark_results/
+    timing_vector_5cubes_4envs_summary.csv
+    timing_image_5cubes_4envs_summary.csv
+    timing_multimodal_5cubes_4envs_summary.csv
+
+  terminal_logs/
+    measure_small_klt_output.log
+    random_env_3cubes_vector_output.log
+    benchmark_*_output.log

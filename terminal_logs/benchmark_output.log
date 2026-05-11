@@ -1,0 +1,113 @@
+#vector 
+rm -f benchmark_results/*.csv
+HEADLESS=1 ENABLE_CAMERAS=1 python -u mycodes/benchmark_timing.py \
+  --num_cubes 5 \
+  --cube_size 0.05 \
+  --num_envs 4 \
+  --num_episodes 100 \
+  --max_episode_steps 1500 \
+  --settle_max_steps 160 \
+  --final_settle_max_steps 400 \
+  --drop_xy_half 0.10 \
+  --obs_type vector \
+  --reward_type hybrid \
+  --benchmark_name vector_5cubes_4envs
+    [INFO] Timing benchmark started
+    [INFO] benchmark_name  = vector_5cubes_4envs
+    [INFO] policy          = random
+    [INFO] num_episodes    = 100
+    [INFO] num_envs        = 4
+    [INFO] num_cubes       = 5
+    [INFO] cube_size       = 0.05
+    [INFO] obs_type        = vector
+    [INFO] reward_type     = hybrid
+    [INFO] episode CSV     = benchmark_results/timing_vector_5cubes_4envs_episodes.csv
+    [INFO] summary CSV     = benchmark_results/timing_vector_5cubes_4envs_summary.csv
+    [EP 001/100] steps=00262 | wall=4.717s | FPS=55.54 | RTF=0.926 | success=4/4 | reward_mean=13.6015
+    [EP 002/100] steps=00259 | wall=3.557s | FPS=72.81 | RTF=1.213 | success=4/4 | reward_mean=13.6314
+    [EP 003/100] steps=00250 | wall=4.185s | FPS=59.74 | RTF=0.996 | success=4/4 | reward_mean=13.5072
+    [INFO] Timing benchmark completed
+    [INFO] Episodes completed: 100
+    [INFO] Mean sim steps:     260.83
+    [INFO] Mean wall time:     4.1404 s
+    [INFO] Mean FPS:           63.07
+    [INFO] Mean RTF:           1.051
+    [INFO] Mean success envs:  4.00/4
+    [INFO] Episode CSV:        benchmark_results/timing_vector_5cubes_4envs_episodes.csv
+    [INFO] Summary CSV:        benchmark_results/timing_vector_5cubes_4envs_summary.csv
+
+#image
+HEADLESS=1 ENABLE_CAMERAS=1 python -u mycodes/benchmark_timing.py \
+  --num_cubes 5 \
+  --cube_size 0.05 \
+  --num_envs 4 \
+  --num_episodes 100 \
+  --max_episode_steps 1500 \
+  --settle_max_steps 160 \
+  --final_settle_max_steps 400 \
+  --drop_xy_half 0.10 \
+  --obs_type image \
+  --reward_type hybrid \
+  --camera_height 256 \
+  --camera_width 256 \
+  --benchmark_name image_5cubes_4envs
+  [INFO] Timing benchmark started
+    [INFO] benchmark_name  = image_5cubes_4envs
+    [INFO] policy          = random
+    [INFO] num_episodes    = 100
+    [INFO] num_envs        = 4
+    [INFO] num_cubes       = 5
+    [INFO] cube_size       = 0.05
+    [INFO] obs_type        = image
+    [INFO] reward_type     = hybrid
+    [INFO] episode CSV     = benchmark_results/timing_image_5cubes_4envs_episodes.csv
+    [INFO] summary CSV     = benchmark_results/timing_image_5cubes_4envs_summary.csv
+    [EP 001/100] steps=00236 | wall=3.891s | FPS=60.65 | RTF=1.011 | success=4/4 | reward_mean=13.5363
+    [EP 002/100] steps=00262 | wall=3.881s | FPS=67.51 | RTF=1.125 | success=4/4 | reward_mean=13.5977
+    [EP 003/100] steps=00258 | wall=3.735s | FPS=69.08 | RTF=1.151 | success=4/4 | reward_mean=13.5479
+    [INFO] Timing benchmark completed
+    [INFO] Episodes completed: 100
+    [INFO] Mean sim steps:     261.73
+    [INFO] Mean wall time:     3.8104 s
+    [INFO] Mean FPS:           68.94
+    [INFO] Mean RTF:           1.149
+    [INFO] Mean success envs:  4.00/4
+
+#multimodel
+HEADLESS=1 ENABLE_CAMERAS=1 python -u mycodes/benchmark_timing.py \
+  --num_cubes 5 \
+  --cube_size 0.05 \
+  --num_envs 4 \
+  --num_episodes 100 \
+  --max_episode_steps 1500 \
+  --settle_max_steps 160 \
+  --final_settle_max_steps 400 \
+  --drop_xy_half 0.10 \
+  --obs_type multimodal \
+  --reward_type hybrid \
+  --camera_height 256 \
+  --camera_width 256 \
+  --benchmark_name multimodal_5cubes_4envs
+    [INFO] Timing benchmark started
+    [INFO] benchmark_name  = multimodal_5cubes_4envs
+    [INFO] policy          = random
+    [INFO] num_episodes    = 100
+    [INFO] num_envs        = 4
+    [INFO] num_cubes       = 5
+    [INFO] cube_size       = 0.05
+    [INFO] obs_type        = multimodal
+    [INFO] reward_type     = hybrid
+    [INFO] episode CSV     = benchmark_results/timing_multimodal_5cubes_4envs_episodes.csv
+    [INFO] summary CSV     = benchmark_results/timing_multimodal_5cubes_4envs_summary.csv
+    [EP 001/100] steps=00254 | wall=4.268s | FPS=59.51 | RTF=0.992 | success=4/4 | reward_mean=13.5322
+    [EP 002/100] steps=00224 | wall=2.995s | FPS=74.79 | RTF=1.246 | success=4/4 | reward_mean=13.5516
+    [EP 003/100] steps=00231 | wall=3.178s | FPS=72.69 | RTF=1.211 | success=4/4 | reward_mean=13.5828
+    [INFO] Timing benchmark completed
+    [INFO] Episodes completed: 100
+    [INFO] Mean sim steps:     270.11
+    [INFO] Mean wall time:     3.8797 s
+    [INFO] Mean FPS:           69.72
+    [INFO] Mean RTF:           1.162
+    [INFO] Mean success envs:  3.99/4
+    [INFO] Episode CSV:        benchmark_results/timing_multimodal_5cubes_4envs_episodes.csv
+    [INFO] Summary CSV:        benchmark_results/timing_multimodal_5cubes_4envs_summary.csv

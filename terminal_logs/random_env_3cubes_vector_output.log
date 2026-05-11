@@ -1,0 +1,69 @@
+[INFO][AppLauncher]: Loading experience file: /home/user_124/IsaacLab/source/apps/isaaclab.python.headless.rendering.kit
+[Warning] [omni.isaac.kit.simulation_app] Modules: ['omni.kit_app'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [omni.isaac.kit.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+Loading user config located at: '/home/user_124/anaconda3/envs/isaaclab/lib/python3.10/site-packages/omni/data/Kit/Isaac-Sim/4.2/user.config.json'
+[Info] [carb] Logging to file: /home/user_124/anaconda3/envs/isaaclab/lib/python3.10/site-packages/omni/logs/Kit/Isaac-Sim/4.2/kit_20260509_213029.log
+2026-05-09 18:30:29 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-05-09 18:30:29 [218ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:29 [218ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:29 [232ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.126.09    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090          | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2684      | eae02418.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 6.14.0-37-generic
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900K | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 64038 | Free Memory: 57424
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2026-05-09 18:30:30 [918ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-05-09 18:30:30 [1,324ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,324ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:30 [1,335ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,335ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:30 [1,340ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,340ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:30 [1,347ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,347ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:30 [1,348ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,348ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:30 [1,349ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-05-09 18:30:30 [1,349ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.4]) (impl: carb.windowing-glfw.plugin)
+2026-05-09 18:30:31 [2,721ms] [Warning] [omni.replicator.core.scripts.annotators] Annotator PostProcessDispatch is already registered, overwriting annotator template
+2026-05-09 18:30:40 [11,673ms] [Warning] [omni.hydra] Disabling DLSS Frame Generation for at least one view due to incompatible render outputs and OmniGraph postprocessing being active
+[INFO] Running BinPackingRLEnv random-policy validation
+[INFO] num_envs = 2
+[INFO] num_cubes = 3
+[INFO] cube_size = 0.05
+[INFO] obs_type = vector
+[INFO] reward_type = hybrid
+[INFO] action = normalized [x, y] in [-1, 1]
+
+================================================================================
+[INFO] Episode 1/1
+[OBS ] vector shape = torch.Size([2, 322])
+[STEP] dropped=01/3 | sim_step=0038 | settle_steps=038 | reward_mean= 1.7467 | cube_success_mean=1.0/3 | cube_success_minmax=1-1 | episode_success=0/2 | done=0/2
+[STEP] dropped=02/3 | sim_step=0076 | settle_steps=038 | reward_mean= 1.7291 | cube_success_mean=2.0/3 | cube_success_minmax=2-2 | episode_success=0/2 | done=0/2
+[STEP] dropped=03/3 | sim_step=0111 | settle_steps=035 | reward_mean= 4.7226 | cube_success_mean=3.0/3 | cube_success_minmax=3-3 | episode_success=2/2 | done=2/2
+[INFO] Episode finished
+[INFO] sim steps: 111
+[INFO] sim time:  1.8500 s
+[INFO] wall time: 2.4225 s
+[INFO] FPS:       45.82
+[INFO] RTF:       0.764
+[INFO] reward sum per env:
+tensor([8.2109, 8.1857], device='cuda:0')
+[INFO] success envs: 2/2
+[INFO] cubes succeeded per env:
+tensor([3, 3], device='cuda:0')
+2026-05-09 18:30:43 [14,805ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x3c6ee7b0:World0.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+[INFO]: Simulation is stopped. Shutting down the app.
